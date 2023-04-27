@@ -1,0 +1,7 @@
+enpgf:
+  model: hawkes
+  n: 1024
+  nens: 128
+  dt: 0.1
+  device: cuda
+  topic: spikes_1024_1288_hawkes

@@ -1,0 +1,10 @@
+{
+    "enpgf": {
+        "fname": "sim_512_enpgf.json",
+        "n": 512,
+        "nens": 128,
+        "nstep": 55500,
+        "dN": "data/sim_512_data.csv.gz",
+        "alpha": "sim/sim_512_alpha.csv.gz"
+    }
+}
