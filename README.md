@@ -1,18 +1,19 @@
 # EnPGF Lab 
-Reposistory for the pytorch EnPGF implementation, the EnPGF explorer app and the apache kafka EnPGF Online training framework described in the blog post [Online EnPGF training for temporal point processes](https://sdelahaies.github.io/enpgf-lab.html).
+Repository for the pytorch EnPGF implementation, the EnPGF explorer app and the apache kafka EnPGF Online training framework described in the blog post [Online EnPGF training for temporal point processes](https://sdelahaies.github.io/enpgf-lab.html).
 
-Running the code assumes that:
+Installing/running the code assumes that:
 
 * nvidia drivers are correctly set up on the host system,
 
 * docker engine is running on the host system to operate kafka.
 
-While all the features can run on a properly set up host sytem, we provide a docker compose installation that provides an isolated framework and let the host system untouched. 
+While all the features can run on a properly set up host sytem, we provide a docker compose installation that provides an isolated framework and lets the host system untouched. 
 
+![excitation matrix](/assets/alpha.png "Excitation matrix")
 
 # Docker install
 
-The docker install facilitates the installation of the packages by providing an isolated framework. From a terminal run the commands
+The docker install facilitates the installation of the package by providing an isolated framework. From a terminal run the commands
 
 ```
 git clone https://github.com/sdelahaies/enpgf-lab.git
@@ -20,13 +21,15 @@ cd enpgf-lab
 docker compose up -d
 ```
 
-which install and set up and start the following containers:
+this installs, sets up and starts the following containers:
 
 * **kafka**: a kafka broker which organizes and stores streams of events,
 
 * **kafka-ui**: a simple dashboard to monitor the flow of data produced and consumed, available at `127.0.0.1:8080`.
 
-* **enpgf-lab**: a minimal ubuntu 22.04 distribution with nvidia-cuda toolkit and required packages (torch, dash, kafka, ...) which starts the app and make it avalaible at `127.0.0.1:60001`. A terminal bash is available by running the command
+* **enpgf-lab**: a minimal ubuntu 22.04 distribution with nvidia-cuda toolkit and required packages (torch, dash, kafka, ...) which starts the app and makes it avalaible at `127.0.0.1:60001`. 
+
+A terminal bash is available by running the command
 ```
 docker exec -it enpgf-lab /bin/bash
 ```
