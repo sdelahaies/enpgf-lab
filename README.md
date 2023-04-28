@@ -3,9 +3,9 @@ Repository for the pytorch EnPGF implementation, the EnPGF explorer app and the 
 
 Installing/running the code assumes that:
 
-* nvidia drivers are correctly set up on the host system,
+* [nvidia drivers and toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html) are correctly set up on the host system,
 
-* docker engine is running on the host system to operate kafka.
+* [docker](https://docs.docker.com/engine/) engine is running on the host system to operate kafka.
 
 While all the features can run on a properly set up host sytem, we provide a docker compose installation that provides an isolated framework and lets the host system untouched. 
 
